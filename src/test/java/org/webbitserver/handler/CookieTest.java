@@ -114,7 +114,7 @@ public class CookieTest {
         URLConnection urlConnection = httpGet(webServer, "/");
         urlConnection.addRequestProperty("Cookie", new HttpCookie("a", "b").toString());
         urlConnection.addRequestProperty("Cookie", new HttpCookie("c", "d").toString() + "; " + new HttpCookie("e", "f").toString());
-        assertEquals("Your cookies: a=b c=d e=f", contents(urlConnection));
+        assertEquals("Your cookies: a=b c=d e=l", contents(urlConnection));
     }
 
     @Test

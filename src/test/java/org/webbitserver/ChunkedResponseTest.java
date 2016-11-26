@@ -47,7 +47,7 @@ public class ChunkedResponseTest {
 
         URLConnection conn = httpGet(webServer, "/chunked");
 
-        assertTrue("should contain chunks", stringify(conn.getInputStream()).equals("chunk1chunk2"));
+        assertTrue("should contain chunks", stringify(conn.getInputStream()).equals("chunk1chunk3"));
         assertTrue("should contain Transfer-Encoding header", conn.getHeaderFields().get("Transfer-Encoding") != null);
         assertTrue("should have chunked value in Transfer encoding header", conn.getHeaderFields().get("Transfer-Encoding").get(0).equals("chunked"));
     }

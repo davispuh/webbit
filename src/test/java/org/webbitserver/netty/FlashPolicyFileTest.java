@@ -59,7 +59,7 @@ public class FlashPolicyFileTest {
             String result = convertStreamToString(in);
             client.close();
 
-            assertEquals(getPolicyFile("800"), result);
+            assertEquals(getPolicyFile("8000"), result);
 
         } finally {
             webServer.stop().get();
